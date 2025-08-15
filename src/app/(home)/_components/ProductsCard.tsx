@@ -20,8 +20,8 @@ interface ProductsCardProps {
 
 export default function ProductsCard({ d }: ProductsCardProps) {
   return (
-    <Link
-      href={`https://www.vernx.shop/id/${d.handle}`}
+    <Link href={`/products/${d.handle}`} className="...">
+
       className="hover:scale-105 transition-all duration-300 ease-out"
     >
       <div
@@ -46,3 +46,4 @@ export default function ProductsCard({ d }: ProductsCardProps) {
     </Link>
   );
 }
+
