@@ -20,7 +20,10 @@ interface ProductsCardProps {
 
 export default function ProductsCard({ d }: ProductsCardProps) {
   return (
-    <Link href={`https://www.vygaming.id/id/${d.handle}`} className="hover:scale-105 transition-all duration-300 ease-out">
+    <Link
+      href={`https://www.vernx.shop/id/${d.handle}`}
+      className="hover:scale-105 transition-all duration-300 ease-out"
+    >
       <div
         className={`animate-fade-up animate-duration-300 group relative h-full w-full flex flex-col bg-[#212121] rounded-2xl overflow-hidden hover:ring-2 hover:ring-offset-2 hover:ring-offset-[#141414] hover:ring-[#0563FC] transition-all duration-300 ease-in-out`}
       >
