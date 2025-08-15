@@ -60,18 +60,18 @@ export default function Footer() {
           </div>
         </div>
         <div className="w-full text-xs text-center space-y-1 pt-10 border-t border-[#343434]">
-          <h1>© 2024 VYGAMING STORE. All rights reserved.</h1>
-          <h1>
-            Built by{" "}
-            <Link
-              href={"https://github.com/hassankary"}
-              className=" font-semibold text-[#0563FC]"
-            >
-              @hassankary
-            </Link>
-          </h1>
-        </div>
-      </div>
+  <h1>© 2025 vernx Shop. All rights reserved.</h1>
+  <h1>
+    Built by{" "}
+    <Link
+      href={"https://github.com/vernx"}  // Change this to your profile URL if you want
+      className=" font-semibold text-[#0563FC]"
+    >
+      @vernx
+    </Link>
+  </h1>
+</div>
+  </div>
     </div>
   );
 }
