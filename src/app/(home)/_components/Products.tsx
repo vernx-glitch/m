@@ -119,15 +119,14 @@ export default function Products() {
             onClick={() => setMore({ ...more, topup: more.topup + 12 })}
             className={`h-10 px-4 py-2 bg-[#121212] active:bg-[#121212]/70 md:hover:bg-[#121212]/80 font-medium text-xs rounded-md active:scale-95 transition-all duration-300 ease-out`}
           >
-            Tampilkan Lainnya...
+            Show More...
           </button>
-        ) : menu === "Voucher" &&
-          more.voucher < products[1]?.products.length ? (
+        ) : menu === "Voucher" && more.voucher < products[1]?.products.length ? (
           <button
             onClick={() => setMore({ ...more, voucher: more.voucher + 12 })}
             className={`h-10 px-4 py-2 bg-[#121212] active:bg-[#121212]/70 md:hover:bg-[#121212]/80 font-medium text-xs rounded-md active:scale-95 transition-all duration-300 ease-out`}
           >
-            Tampilkan Lainnya...
+            Show More...
           </button>
         ) : null}
       </div>
