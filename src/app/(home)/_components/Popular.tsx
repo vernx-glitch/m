@@ -54,10 +54,10 @@ export default function Popular() {
     <div className="container flex flex-col mx-auto px-4 space-y-5 xl:max-w-7xl">
       <div className="flex flex-col">
         <h1 className="uppercase font-semibold text-lg leading-relaxed tracking-wider">
-          🔥 Populer Sekarang!
+          🔥 Popular Now!
         </h1>
         <p className="pl-8 text-xs">
-          Berikut adalah beberapa produk yang paling populer saat ini.
+          Here are some of the most popular products currently available.
         </p>
       </div>
       <ul className="grid grid-cols-2 md:grid-cols-3 gap-4">
@@ -78,7 +78,7 @@ export default function Popular() {
               return (
                 <li key={i}>
                   <Link
-                    href={`https://www.vygaming.id/id/${d.handle}`}
+                    href={`https://www.vernx.com/${d.handle}`}
                     className={`h-full flex p-2 bg-top bg-custom-clamp bg-card-pattern bg-[#202020] rounded-2xl hover:ring-2 hover:ring-offset-2 hover:ring-offset-[#141414] hover:ring-[#0563FC] transition-all duration-300 ease-in-out overflow-hidden`}
                   >
                     <div
@@ -98,9 +98,7 @@ export default function Popular() {
                         <h1 className="font-semibold text-[0.625rem] md:text-[1rem]">
                           {d.title}
                         </h1>
-                        <p className="text-[0.625rem] md:text-sm">
-                          {d.publisher}
-                        </p>
+                        <p className="text-[0.625rem] md:text-sm">{d.publisher}</p>
                       </div>
                     </div>
                   </Link>
