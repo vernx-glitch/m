@@ -25,7 +25,7 @@ export default function Leaderboard() {
 
   const getListToday = async (): Promise<void> => {
     try {
-      const res = await fetch("https://vernx-api.vercel.app/today"); // ✅ changed domain
+      const res = await fetch("https://vernx-api.vercel.app/today");
       if (!res.ok) throw new Error(`HTTP error! Status: ${res.status}`);
       const response = await res.json();
       setListToday(response);
@@ -36,7 +36,7 @@ export default function Leaderboard() {
 
   const getListWeek = async (): Promise<void> => {
     try {
-      const res = await fetch("https://vernx-api.vercel.app/week"); // ✅ changed domain
+      const res = await fetch("https://vernx-api.vercel.app/week");
       if (!res.ok) throw new Error(`HTTP error! Status: ${res.status}`);
       const response = await res.json();
       setListWeek(response);
@@ -47,7 +47,7 @@ export default function Leaderboard() {
 
   const getListMonth = async (): Promise<void> => {
     try {
-      const res = await fetch("https://vernx-api.vercel.app/month"); // ✅ changed domain
+      const res = await fetch("https://vernx-api.vercel.app/month");
       if (!res.ok) throw new Error(`HTTP error! Status: ${res.status}`);
       const response = await res.json();
       setListMonth(response);
@@ -78,17 +78,7 @@ export default function Leaderboard() {
               Top 10 Purchases at vernx Shop
             </h1>
             <p className="max-w-3xl mt-4 text-center text-lg leading-8">
-              Below is a list of the top 10 customers based on total purchases. This data is pulled from our system and updated regularly.{" "}
-              <span className=" text-pink-600">
-                (Last updated: September 11, 2024. See latest updates at{" "}
-                <Link
-                  href={"https://vernx.com/leaderboard"}
-                  className="underline font-bold hover:text-pink-500 transition-all"
-                >
-                  vernx.com/leaderboard
-                </Link>
-                )
-              </span>
+              Below is a list of the top 10 customers based on total purchases. This data is pulled from our system and updated regularly.
             </p>
           </div>
 
