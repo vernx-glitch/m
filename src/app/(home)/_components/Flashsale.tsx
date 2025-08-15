@@ -1,3 +1,4 @@
+"use client";
 import CountdownTimer from "@/app/components/CountdownTimer";
 import Image from "next/image";
 import Link from "next/link";
@@ -51,6 +52,8 @@ export default function FlashSale() {
     }
   }, [error]);
 
+  const exchangeRate = 0.0053; // Approximate IDR to INR conversion rate
+
   return (
     <div className="container flex flex-col mx-auto px-4 xl:max-w-7xl">
       <div className="flex flex-col w-full bg-[#1E1E1E] rounded-2xl overflow-hidden">
@@ -61,7 +64,7 @@ export default function FlashSale() {
             </span>
             <CountdownTimer />
           </div>
-          <p className="pl-8 text-xs">Pesan sekarang! Persediaan terbatas.</p>
+          <p className="pl-8 text-xs">Order now! Limited stock available.</p>
         </div>
         <Marquee pauseOnHover autoFill className="flex">
           <div className="flex flex-row px-2 py-3 gap-x-4">
@@ -80,7 +83,7 @@ export default function FlashSale() {
               : flashSale?.map((d, i) => {
                   return (
                     <Link
-                      href={`https://www.vygaming.id/id/${d.productHandle}`}
+                      href={`https://www.vernx.com/${d.productHandle}`}
                       key={i}
                       className="w-[265px] flex flex-col flex-shrink-0 p-4 bg-[#202020] border border-[#212121] font-semibold gap-y-2 rounded-xl overflow-hidden"
                     >
@@ -95,16 +98,12 @@ export default function FlashSale() {
                         <div className="flex flex-col overflow-hidden">
                           <h1 className="text-sm">{d.productName}</h1>
                           <h1 className="text-xs text-[#B42D6C] line-through">
-                            Rp{" "}
-                            {d.originalPrice
-                              .toString()
-                              .replace(/\B(?=(\d{3})+(?!\d))/g, ".")}
+                            ₹{" "}
+                            {Math.round(d.originalPrice * exchangeRate).toLocaleString("en-IN")}
                           </h1>
                           <h1 className="text-xs text-[#0563FC]">
-                            Rp{" "}
-                            {d.price
-                              .toString()
-                              .replace(/\B(?=(\d{3})+(?!\d))/g, ".")}
+                            ₹{" "}
+                            {Math.round(d.price * exchangeRate).toLocaleString("en-IN")}
                           </h1>
                         </div>
                       </div>
@@ -115,10 +114,8 @@ export default function FlashSale() {
                         <div className="absolute h-2 w-2 bg-[#113F8C]"></div>
                         <div className="absolute right-0 bottom-0 h-2 w-2 bg-[#113F8C]"></div>
                         <div className="absolute w-[137px] py-1 rotate-45 top-7 -right-[28px] uppercase text-center text-[10px] bg-[#0563FC]">
-                          Hemat Rp{" "}
-                          {(d.originalPrice - d.price)
-                            .toString()
-                            .replace(/\B(?=(\d{3})+(?!\d))/g, ".")}
+                          Save ₹{" "}
+                          {Math.round((d.originalPrice - d.price) * exchangeRate).toLocaleString("en-IN")}
                         </div>
                       </div>
                     </Link>
