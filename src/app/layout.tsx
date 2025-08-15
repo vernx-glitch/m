@@ -18,9 +18,9 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "VYGAMING Clone by Hassankary",
+  title: "vernx Shop - Your Trusted Store",
   description:
-    "Top up game & voucher terlaris, murah, aman legal 100% buka 24 Jam dengan payment terlengkap se-Indonesia.",
+    "vernx Shop: The best place for game top-ups, vouchers, and more. Fast, secure, and available 24/7 with complete payment options across Indonesia.",
 };
 
 export const viewport: Viewport = {
